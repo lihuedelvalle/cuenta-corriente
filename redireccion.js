@@ -1,15 +1,15 @@
-var app = angular.module("facturaElectronica", ["ngRoute"]);
-app.config(function($routeProvider) {
+angular.module('facturaElectronica',['ngRoute'])
+	.config(function($routeProvider) {
     $routeProvider
-    .when('/',{
-      templateUrl : "home.html",
-      controller: "londonCtrl"
-    })
-  		.when('/home',{
-        templateUrl : "home.html",
-        controller: "londonCtrl"
+   		.when('/home',{
+				templateUrl:'home.html',
+				controller: 'home'
 			})
-  		.otherwise('/home',{
-  				templateUrl:'home.html'
-  			});
+     	.when('/usuariosBuscar',{
+  				templateUrl:'configuracion/usuariosBuscar.html',
+  				controller: 'usuariosBuscar'
+  		})
+			.otherwise('/home',{
+				templateUrl:'home.html'
+			});
 });

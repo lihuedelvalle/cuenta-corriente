@@ -1,4 +1,3 @@
-<!doctype html>
 <html lang="en"  ng-app="facturaElectronica">
   <head>
     <!-- Required meta tags -->
@@ -16,6 +15,7 @@
 
         <script src="redireccion.js"></script>
         <script src="index.js"></script>
+        <script src="configuracion/usuariosBuscar.js"></script>
     <title>Factura Electronica</title>
   </head>
   <body style="font-family: 'Barlow', sans-serif;">
@@ -31,14 +31,14 @@
           </div>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#!home">Inicio <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Configuracion
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Buscar Usuario</a>
+                <a class="dropdown-item" href="#!usuariosBuscar">Buscar Usuario</a>
               </div>
             </li>
           </ul>
@@ -58,7 +58,7 @@
       </nav>
     </header>
 
-    <div ng-view></div>
+    <main  ng-view ></main>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
